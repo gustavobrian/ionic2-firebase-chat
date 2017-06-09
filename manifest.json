@@ -1,6 +1,6 @@
 {
-  "name": "Chat",
-  "short_name": "Chat",
+  "name": "Bol Chat",
+  "short_name": "Bol Chat",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
@@ -9,5 +9,5 @@
     "type": "image/png"
   }],
   "background_color": "#1e226b",
-  "theme_color": "#1e226b"
+  "theme_color": "#11143f"
 }
