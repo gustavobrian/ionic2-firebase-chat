@@ -7,12 +7,13 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HomePage } from "../pages/home/home";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = SigninPage;
+  rootPage: any;
   currentUser: User;
 
   constructor(
@@ -21,13 +22,14 @@ export class MyApp {
     splashScreen: SplashScreen,
     authService: AuthService,
     userService: UserService) {
-
     authService.auth.subscribe((authState: FirebaseAuthState) => {
-
       if (authState) {
         userService.currentUser.subscribe((user: User) => {
           this.currentUser = user;
+          this.rootPage = HomePage;
         })
+      } else {
+        this.rootPage = SigninPage;
       }
 
     });

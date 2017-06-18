@@ -15,7 +15,7 @@
     },
     "messages": {
       "$messages_list_id": {
-	      ".indexOn": "timestamp"
+        ".indexOn": "timestamp"
       }
     }
   }
